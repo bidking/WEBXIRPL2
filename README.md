@@ -1,4 +1,5 @@
 # Web Kelas
+create bang eki,dafy
 Web Kelas adalah platform yang bertujuan untuk menyediakan informasi tentang kelas kami. 
 
 Teknologi yang digunakan diantaranya: 
