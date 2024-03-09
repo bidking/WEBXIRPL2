@@ -1,5 +1,5 @@
 # Web Kelas
-create bang eki,dafy
+create bang eki,dafy,esta
 Web Kelas adalah platform yang bertujuan untuk menyediakan informasi tentang kelas kami. 
 
 Teknologi yang digunakan diantaranya: 
@@ -18,8 +18,9 @@ Apa yang dapat Anda temukan di web ini:
 Project ini di buat oleh :
 - Eki
 - Dafy
+- esta
 
-Kunjungi situs web kami di https://xitkj3.vercel.app/ untuk mendapatkan informasi lebih lanjut. Kami sangat menghargai apabila Anda ingin menggunakan proyek ini, harap sertakan kredit kami dalam penggunaan Anda. Terima kasih! 🙏
+Kunjungi situs web kami di https://web-xirpl2.vercel.app/ untuk mendapatkan informasi lebih lanjut. Kami sangat menghargai apabila Anda ingin menggunakan proyek ini, harap sertakan kredit kami dalam penggunaan Anda. Terima kasih! 🙏
 
 # Tutorial Running Webnya 
 Note: ini merupakan cara saya, jika ada yang lebih mudah dan efisien silahkan
