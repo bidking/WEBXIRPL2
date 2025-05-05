@@ -15,7 +15,7 @@ const Navbar = () => {
 					<img src="/NavIcon.png" alt="" className="w-6 h-6" onClick={toggleMenu} />
 				</div>
 				<div className={`text-center text-white ${isMenuOpen ? "hidden" : ""}`}>
-					<div className="text-[0.7rem]">Hi, visitor!</div>
+					<div className="text-[0.7rem]">Hi, ALUMNI, KANGEN?!</div>
 					<div className="font-bold text-[1rem]">WELCOME</div>
 				</div>
 
@@ -30,7 +30,7 @@ const Navbar = () => {
 				)}
 
 				<div
-					className={`fixed top-0 left-0 h-full w-64  shadow-lg transform transition-transform duration-300 ease-in-out ${
+					className={`fixed top-0 left-0 h-full w-64  shadow-lg transform transition-transform duration-300 ease-in-out  ${
 						isMenuOpen ? "translate-x-0" : "-translate-x-full"
 					}`}
 					id="IsiNavbar">

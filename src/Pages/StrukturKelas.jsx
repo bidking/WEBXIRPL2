@@ -200,19 +200,19 @@ const StrukturKelas = () => {
 					<div className="flex-col">
 						<BorderStruktur Jabatan="Keamanan" Nama="raihan s" Width="120px" />
 						<div className="py-[3%]"></div>
-						<BorderStruktur Jabatan="" Nama="none" Width="120px" />
+						
 					</div>
 
 					<div className="flex-col">
 						<BorderStruktur Jabatan="Kebersihan" Nama="sutrisna" Width="120px" />
 						<div className="py-[3%]"></div>
-						<BorderStruktur Jabatan="" Nama="none" Width="120px" />
+					
 					</div>
 
 					<div className="flex-col hidden lg:flex">
 						<BorderStruktur Jabatan="Kesehatan" Nama="bintang putra" Width="120px" />
 						<div className="py-[3%]"></div>
-						<BorderStruktur Jabatan="" Nama="none" Width="120px" />
+					
 					</div>
 				</div>
 
@@ -227,7 +227,7 @@ const StrukturKelas = () => {
 						<div className="relative bottom-3">
 							<BorderStruktur Jabatan="Kesehatan" Nama="bintang putra" Width="120px" />
 							<div className="py-[3%]"></div>
-							<BorderStruktur Jabatan="" Nama="none" Width="120px" />
+							
 						</div>
 					</div>
 				</div>

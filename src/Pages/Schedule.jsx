@@ -64,56 +64,72 @@ const Schedule = () => {
   const currentPiketNames = piketGroup[new Date().getDay() - 1];
 
   return (
-    <>
-      {/* Jadwal Mapel */}
-      <div className="lg:flex lg:justify-center lg:gap-32 lg:mb-10 lg:mt-16 ">
-        <div className="text-white flex flex-col justify-center items-center mt-8 md:mt-3 overflow-y-hidden">
-          <div
-            className="text-2xl font-medium mb-5"
-            data-aos="fade-up"
-            data-aos-duration="500"
-          >
-            {currentDay}
-          </div>
-          <div data-aos="fade-up" data-aos-duration="400">
+    <div className="container mx-auto px-4 pb-16">
+      <div className="flex flex-col md:flex-row justify-between gap-8 mt-8">
+        {/* Class Schedule - Left Column */}
+        <div className="text-white flex-1 glass-card p-6" data-aos="fade-right" data-aos-duration="600">
+          <h2 className="text-2xl font-medium mb-5 text-center text-gradient-primary">
+            {currentDay} Classes
+          </h2>
+          <div className="bg-[rgba(26,26,46,0.4)] rounded-lg p-4 max-h-[400px] overflow-y-auto">
             {TodayComponent ? (
-              <React.Suspense fallback={<p>Loading...</p>}>
+              <React.Suspense fallback={<div className="flex justify-center p-4"><div className="loader"></div></div>}>
                 <TodayComponent />
               </React.Suspense>
             ) : (
-              <p className="opacity-50">Tidak Ada Jadwal Hari Ini</p>
+              <p className="opacity-50 text-center py-8">No classes today</p>
+            )}
+          </div>
+        </div>
+
+        {/* Picket Schedule - Right Column */}
+        <div className="text-white flex-1 glass-card p-6" data-aos="fade-left" data-aos-duration="600">
+          <h2 className="text-2xl font-medium mb-5 text-center text-gradient-accent">
+            Picket Schedule
+          </h2>
+          <div className="bg-[rgba(26,26,46,0.4)] rounded-lg p-4 max-h-[400px] overflow-y-auto">
+            {currentPiketNames && currentPiketNames.length > 0 ? (
+              <div className="border border-[rgba(255,42,109,0.2)] rounded-lg overflow-hidden">
+                {currentPiketNames.map((piketName, index) => (
+                  <div
+                    key={index}
+                    className={`border-t border-[rgba(255,42,109,0.2)] flex justify-between items-center py-3 px-4 ${
+                      index === 0 ? "border-t-0" : ""
+                    } hover:bg-[rgba(255,42,109,0.1)] transition-colors`}
+                    data-aos="fade-up"
+                    data-aos-duration={300 + index * 50}
+                    data-aos-delay={100 * index}
+                  >
+                    <div className="text-base font-medium">{index + 1}.</div>
+                    <div className="text-base font-medium flex-1 text-center">{piketName}</div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p className="opacity-50 text-center py-8">Maintenance in progress for schedule system</p>
             )}
           </div>
         </div>
       </div>
-
-      {/* Jadwal Piket */}
-      <div className="text-white flex flex-col justify-center items-center mt-8 lg:mt-0 overflow-y-hidden">
-        <div
-          className="text-2xl font-medium mb-5 text-center"
-          data-aos="fade-up"
-          data-aos-duration="500"
-        >
-          Picket
-        </div>
-        {currentPiketNames && currentPiketNames.length > 0 ? (
-          currentPiketNames.map((piketName, index) => (
-            <div
-              key={index}
-              className={` border-t-2 border-white flex justify-center py-[0.50rem] w-72 px-3 ${
-                index === currentPiketNames.length - 1 ? "border-b-2" : ""
-              }`}
-              data-aos="fade-up"
-              data-aos-duration={600 + index * 100}
-            >
-              <div className="text-base font-medium">{piketName}</div>
-            </div>
-          ))
-        ) : (
-          <p className="opacity-50">Maaf Sistem Jadwal Sedang ada perbaikan</p>
-        )}
-      </div>
-    </>
+      
+      {/* Custom CSS for Loader */}
+      <style jsx>{`
+        .loader {
+          width: 24px;
+          height: 24px;
+          border: 3px solid var(--primary-color);
+          border-radius: 50%;
+          border-top-color: transparent;
+          animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+      `}</style>
+    </div>
   );
 };
 
