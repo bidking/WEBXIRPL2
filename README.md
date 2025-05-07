@@ -14,9 +14,6 @@ Apa yang dapat Anda temukan di web ini:
 - Structure And Schedule: Memberikan informasi rinci tentang struktur kelas dan jadwal yang tersedia.
 
 
-
-Kunjungi situs web kami di https://xitkj3.vercel.app/ untuk mendapatkan informasi lebih lanjut. Kami sangat menghargai apabila Anda ingin menggunakan proyek ini, harap sertakan kredit kami dalam penggunaan Anda. Terima kasih! 🙏
-
 # Tutorial Running Webnya 
 Note: ini merupakan cara saya, jika ada yang lebih mudah dan efisien silahkan
 
